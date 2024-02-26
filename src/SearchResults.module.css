@@ -5,3 +5,8 @@
 h1 {
     font-size: 3em;
 }
+
+.SearchResults-header{
+    display: flex;
+    justify-content: center;
+}
