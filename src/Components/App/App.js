@@ -26,6 +26,28 @@ function App() {
     },
   ]);
 
+  const [playlistName, setPlaylistName] = useState("Example Playlist Name");
+  const [playlistTracks, setPlaylistTracks] = useState([
+    {
+      name: "Example Playlist Name 1",
+      artist: "Example Playlist Artist 1",
+      album: "Example Playlist Album 1",
+      id: 11,
+    },
+    {
+      name: "Example Playlist Name 2",
+      artist: "Example Playlist Artist 2",
+      album: "Example Playlist Album 2",
+      id: 22,
+    },
+    {
+      name: "Example Playlist Name 3",
+      artist: "Example Playlist Artist 3",
+      album: "Example Playlist Album 3",
+      id: 33,
+    },
+  ]);
+
   return (
     <div>
       <h1>
@@ -36,7 +58,10 @@ function App() {
 
         <div className={styles["App-playlist"]}>
           <SearchResults userSearchResults={searchResults} />
-          {/* <!-- Add a Playlist component --> */}
+          <Playlist
+            userPlaylistName={playlistName}
+            userPlaylistTracks={playlistTracks}
+          />
         </div>
       </div>
     </div>

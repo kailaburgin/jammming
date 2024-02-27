@@ -11,7 +11,9 @@ function Track(props) {
     <div className={styles.Track}>
       <div className={styles["Track-information"]}>
         <h3>{props.track.name}</h3>
-        <p>{props.track.artist} | {props.track.album}</p>
+        <p>
+          {props.track.artist} | {props.track.album}
+        </p>
       </div>
       {/* <button class="Track-action"><!-- + or - will go here --></button> */}
     </div>
