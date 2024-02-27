@@ -3,7 +3,7 @@ import styles from "./Playlist.module.css";
 
 export default function Playlist() {
   const [playList, setPlaylist] = useState([]);
-    
+
   return (
     <div
       style={{
@@ -16,7 +16,15 @@ export default function Playlist() {
         placeholder="Playlist Name..."
         className={styles.inputStyle}
       />
-      <p style={{ border: "1px solid black", marginRight: "2em", marginLeft: '2em'}}>Track</p>
+      <p
+        style={{
+          border: "1px solid black",
+          marginRight: "2em",
+          marginLeft: "2em",
+        }}
+      >
+        Track
+      </p>
       <button>Add to Spotify</button>
     </div>
   );
