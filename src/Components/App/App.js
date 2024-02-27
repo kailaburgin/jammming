@@ -16,7 +16,13 @@ function App() {
       name: "Track 2",
       artist: "Artist 2",
       album: "Album 2",
-      id: 1,
+      id: 2,
+    },
+    {
+      name: "Track 3",
+      artist: "Artist 3",
+      album: "Album 3",
+      id: 3,
     },
   ]);
 
@@ -29,7 +35,7 @@ function App() {
         {/* <!-- Add a SearchBar component --> */}
 
         <div className={styles["App-playlist"]}>
-          {<SearchResults userSearchResults={searchResults} />}
+          <SearchResults userSearchResults={searchResults} />
           {/* <!-- Add a Playlist component --> */}
         </div>
       </div>
