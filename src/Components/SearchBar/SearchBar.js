@@ -1,13 +1,13 @@
 import React from "react";
 import styles from "./SearchBar.module.css";
-export default function SearchBar() {
+
+function SearchBar() {
   return (
-    <div>
-      <input
-        type="search"
-        placeholder="Search here..."
-        className={styles.inputStyle}
-      />
+    <div className={styles.SearchBar}>
+      <input placeholder="Enter A Song, Album, or Artist" />
+      <button className={styles.SearchButton}>SEARCH</button>
     </div>
   );
 }
+
+export default SearchBar;
