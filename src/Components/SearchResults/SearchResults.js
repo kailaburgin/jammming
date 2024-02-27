@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import styles from "./SearchResults.module.css";
-import Tracklist from "./Tracks";
 
 // const tracks = [
 //   {
@@ -55,7 +54,7 @@ export default function SearchResults() {
           marginLeft: "2em",
         }}
       >
-        <ul>{Tracklist}</ul>
+        <ul>{}</ul>
       </div>
     </div>
   );
