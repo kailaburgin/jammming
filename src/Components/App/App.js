@@ -48,14 +48,29 @@ function App() {
     },
   ]);
 
-  const addTrack = (track) => {
+  function addTrack(track) {
     const existingTrack = playlistTracks.find((t) => t.id === track.id);
     if (existingTrack) {
       console.log("Track already exists");
     } else {
       setPlaylistTracks([...playlistTracks, track]);
     }
-  };
+  }
+
+  // function addTrack(track) {
+  //   const existingTrack = playlistTracks.find((t) => t.id === track.id);
+  //   const newTrack = playlistTracks.concat(track);
+  //   if (existingTrack) {
+  //     console.log("Track already exists");s
+  //   } else {
+  //     setPlaylistTracks(newTrack);
+  //   }
+  // }
+
+  function removeTrack(track) {
+    const existingTrack = playlistTracks.filter((t) => t.id !== track.id);
+    setPlaylistTracks(existingTrack);
+  }
 
   return (
     <div>
@@ -70,6 +85,7 @@ function App() {
           <Playlist
             userPlaylistName={playlistName}
             userPlaylistTracks={playlistTracks}
+            onRemove={removeTrack}
           />
         </div>
       </div>
