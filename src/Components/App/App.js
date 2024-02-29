@@ -70,14 +70,17 @@ function App() {
     const trackURIs = playlistTracks.map((track) => track.uri);
   }
 
+  function search(search) {
+    console.log(search);
+  }
+
   return (
     <div>
       <h1>
         Ja<span className={styles.highlight}>mmm</span>ing
       </h1>
       <div className={styles.App}>
-        {/* <!-- Add a SearchBar component --> */}
-
+        <SearchBar onSearch={search} />
         <div className={styles["App-playlist"]}>
           <SearchResults userSearchResults={searchResults} onAdd={addTrack} />
           <Playlist
