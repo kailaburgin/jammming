@@ -3,10 +3,21 @@ import styles from "./Track.module.css";
 
 function Track(props) {
   function renderAction() {
-    return (
-      <button className="Track-action">{props.isRemoval ? "-" : "+"}</button>
-    );
+    if (props.isRemoval) {
+      return (
+        <button className={styles["Track-action"]} onClick={passTrack}>
+          +
+        </button>
+      );
+    } else {
+      return <button className={styles["Track-action"]}>-</button>;
+    }
   }
+
+  function passTrack() {
+    props.onAdd(props.track);
+  }
+
   return (
     <div className={styles.Track}>
       <div className={styles["Track-information"]}>
@@ -16,6 +27,7 @@ function Track(props) {
         </p>
       </div>
       {/* <button class="Track-action"><!-- + or - will go here --></button> */}
+      {renderAction()}
     </div>
   );
 }

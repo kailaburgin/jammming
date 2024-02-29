@@ -48,6 +48,15 @@ function App() {
     },
   ]);
 
+  const addTrack = (track) => {
+    const existingTrack = playlistTracks.find((t) => t.id === track.id);
+    if (existingTrack) {
+      console.log("Track already exists");
+    } else {
+      setPlaylistTracks([...playlistTracks, track]);
+    }
+  };
+
   return (
     <div>
       <h1>
@@ -57,7 +66,7 @@ function App() {
         {/* <!-- Add a SearchBar component --> */}
 
         <div className={styles["App-playlist"]}>
-          <SearchResults userSearchResults={searchResults} />
+          <SearchResults userSearchResults={searchResults} onAdd={addTrack} />
           <Playlist
             userPlaylistName={playlistName}
             userPlaylistTracks={playlistTracks}
