@@ -4,7 +4,7 @@ import styles from "./SearchBar.module.css";
 function SearchBar(props) {
   const [term, setTerm] = useState("");
 
-  function passTerm(term) {
+  function passTerm() {
     props.onSearch(term);
   }
 
